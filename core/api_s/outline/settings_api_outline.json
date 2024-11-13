@@ -3,8 +3,8 @@
     {
         "name_en": "nederland",
         "name_ru": "\uD83C\uDDF3\uD83C\uDDF1 Нидерланды",
-        "api_url": "https://ip:port",
-        "cert_sha256": "code",
+        "api_url": "https://89.105.201.208:22695/Pjf5W_VgmPSihSIJTPpnKg",
+        "cert_sha256": "7E36138D3DC1AA64DFF993FD794A96EBFF6185C56B42B93DFA53E2E7A002170B",
         "is_active": true
     } 
 }
