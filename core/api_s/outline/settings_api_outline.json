@@ -6,21 +6,5 @@
         "api_url": "https://ip:port",
         "cert_sha256": "code",
         "is_active": true
-    },
-    "germany":
-    {
-        "name_en": "germany",
-        "name_ru": "\uD83C\uDDE9\uD83C\uDDEA Германия",
-        "api_url": "https://ip:port",
-        "cert_sha256": "code",
-        "is_active": false
-    },
-    "france":
-    {
-        "name_en": "france",
-        "name_ru": "\uD83C\uDDEB\uD83C\uDDF7 Франция",
-        "api_url": "https://ip:port",
-        "cert_sha256": "code",
-        "is_active": true
-    }
+    } 
 }
