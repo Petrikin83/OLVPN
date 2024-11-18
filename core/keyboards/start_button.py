@@ -8,7 +8,7 @@ def start_keyboard() -> InlineKeyboardMarkup:
 
     :return: InlineKeyboardMarkup - Объект InlineKeyboardMarkup, содержащий клавиатуру.
     """
-    link_instruction = f"https://telegra.ph/Instrukciya-k-OLVPN-03-13-2"
+    link_instruction = f"https://telegra.ph/Instrukciya-11-18-19"
     keyboard_builder = InlineKeyboardBuilder()
     keyboard_builder.button(text='🔑 Мой ключ', callback_data='my_key')
     keyboard_builder.button(text='💳 Купить ключ', callback_data='get_key')
