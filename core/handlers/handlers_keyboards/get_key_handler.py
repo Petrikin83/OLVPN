@@ -34,7 +34,7 @@ async def day_key(call: CallbackQuery, state: FSMContext) -> (str, InlineKeyboar
     :return: Текст ответа и клавиатура.
     """
     id_user = call.from_user.id
-    amount = 7
+    amount = 100
     day_count = 1
     word_days = "день"
     content, url_pay_keyboard = await build_pay(state, id_user, amount, day_count, word_days)
@@ -51,7 +51,7 @@ async def week_key(call: CallbackQuery, state: FSMContext) -> (str, InlineKeyboa
     :return: Текст ответа и клавиатура.
     """
     id_user = call.from_user.id
-    amount = 40
+    amount = 200
     day_count = 7
     word_days = "дней"
     content, url_pay_keyboard = await build_pay(state, id_user, amount, day_count, word_days)
@@ -68,7 +68,7 @@ async def month_key(call: CallbackQuery, state: FSMContext) -> (str, InlineKeybo
     :return: Текст ответа и клавиатура.
     """
     id_user = call.from_user.id
-    amount = 150
+    amount = 300
     day_count = 30
     word_days = "дней"
     content, url_pay_keyboard = await build_pay(state, id_user, amount, day_count, word_days)
