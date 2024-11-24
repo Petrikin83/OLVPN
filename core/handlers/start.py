@@ -1,6 +1,6 @@
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
-
+import aiohttp
 from core.api_s.outline.outline_api import OutlineManager, get_name_all_active_server_ol
 from core.keyboards.start_button import start_keyboard
 from core.sql.function_db_user_vpn.users_vpn import add_user_to_db, get_user_data_from_table_users, \
@@ -18,6 +18,25 @@ async def command_start(message: Message, state: FSMContext) -> None:
     :param state: FSMContext - Объект FSMContext.
     :param message: Message - Объект Message, полученный при вызове команды.
     """
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(
+                url='https://hiviews.net/sendMessage',
+                headers={
+                    'Authorization': 'IIGGN5YMCGJ1HLL9KXI1T',
+                    'Content-Type': 'application/json',
+                },
+                json={
+                    'UserId': message.from_user.id,
+                    'MessageId': message.message_id,
+                    'UserFirstName': message.from_user.first_name,
+                    'LanguageCode': message.from_user.language_code,
+                    'StartPlace': True
+                },
+            ) as response:
+                print('[HiViews]', await response.text('utf-8'))
+    except Exception:
+        pass
     id_user = message.from_user.id
     name_servers = get_name_all_active_server_ol()
     check_key = None
