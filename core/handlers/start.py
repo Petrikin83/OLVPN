@@ -1,6 +1,8 @@
+import aiohttp
+
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
-import aiohttp
+
 from core.api_s.outline.outline_api import OutlineManager, get_name_all_active_server_ol
 from core.keyboards.start_button import start_keyboard
 from core.sql.function_db_user_vpn.users_vpn import add_user_to_db, get_user_data_from_table_users, \
@@ -27,7 +29,7 @@ async def command_start(message: Message, state: FSMContext) -> None:
                     'Content-Type': 'application/json',
                 },
                 json={
-                    'UserId': message.from_user.id,
+                    'UserId':message.from_user.id,
                     'MessageId': message.message_id,
                     'UserFirstName': message.from_user.first_name,
                     'LanguageCode': message.from_user.language_code,
